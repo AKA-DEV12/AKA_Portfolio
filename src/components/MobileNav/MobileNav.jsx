@@ -14,8 +14,6 @@ function MobileNav({toggleMenu}) {
                         <li className="menu-item"><a href="#profil">Profil</a></li>
                         <li className="menu-item"><a href="#competence">Competence</a></li>
                         <li className="menu-item"><a href="#realisation">Realisation</a></li>
-                        <li className="menu-item"><a href="#">Centre Interet</a></li>
-                        <li className="menu-item"><a href="#">Contact</a></li>
                 </ul>
                 <button className="btn-cv"><a href="/AKA_CV.pdf" download="AKA_CV.pdf">Telecharger Cv</a></button>
             </div>
