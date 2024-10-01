@@ -1,0 +1,126 @@
+.nav-wrapper{
+    
+    background: linear-gradient(90deg, #ffe9ed,#e5ebff);
+    padding: 0;
+    position: sticky; /*l'utiliser sur le conteneur parent qu'on veut fixed pour ne pas rencontre les probleme qu'on recontre souvent avec la propriete position:fixed*/
+    top: 0;
+    z-index: 35px;
+    backdrop-filter: blur(50px);/*il permet de faire des find flou*/
+}
+.nav-content{
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+.logo{
+    border-radius: 50%;
+}
+.nav-content ul{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;/*il permet de mettre une meme mesure d'espace entre les elements */
+    margin: 0 auto;
+}
+.menu-item, .menu-item a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    color: #dc143c;
+    cursor: pointer;
+}.menu-item a:focus{
+    color: royalblue;
+}
+/* l'utilisation du peusdo class ::before nous permet de pre-defini la forme sur lequel notre prochain ::before va venir ce grefer */
+.menu-item::before{ 
+    content: " ";
+    width: 2rem;
+    height: 0.2rem;
+    background: linear-gradient(90deg, crimson,royalblue);
+    position: absolute;
+    bottom: -0.5rem;
+    opacity: 0;
+    transform: translateX(-1.3rem);
+    transition: all 0.3s ease;
+}
+.menu-item:hover::before{
+    content: "a.k.a";
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+.nav-content .btn-cv a{
+    outline: none !important;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    background: linear-gradient(200deg, crimson,royalblue);
+    padding: 0.6rem 2rem;
+    outline: 1px solid transparent;
+    border: none !important;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}.nav-content .btn-cv a:hover{
+    background: #fff;
+    color:  crimson;
+    border: 1px solid linear-gradient(200deg, crimson,royalblue);
+    outline: 1.5px solid royalblue;
+
+}
+/*menu-btn (bouton de navigation du format mobile) */
+.menu-btn{
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    letter-spacing: 1px;
+    color: #e5ebff;
+    background: none;
+    cursor: pointer;
+    line-height: 0;display: none;
+    transition: all 0.3 ease;
+    background: linear-gradient(90deg, #acbcec,royalblue);
+    
+}
+.menu-btn:hover{
+    color: crimson;
+    background: linear-gradient(90deg, #ffe9ed,#e5ebff);
+    border: 1px solid royalblue;
+}
+   
+@media (max-width:769px) {
+    .menu-btn{
+        display: block;
+    }
+    .nav-content ul, button{
+        display: none;
+    }
+    .nav-content{
+        justify-content: space-around;
+    }
+}
+@media (max-width:864px) {
+    .nav-content ul{
+        margin-left: -15px;
+        justify-content: space-evenly;
+    }.nav-content .btn-cv{
+        margin: 20px;
+    }
+}
+@media (max-width:1325){
+    .nav-wrapper{
+        padding: 0 2rem;
+    }
+}

@@ -1,0 +1,162 @@
+a{
+    text-decoration: none;
+}
+.font{
+    width: 100%;
+    background: #111e43;
+    padding-left: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 27px;
+}
+.font .conteneur{
+    width: 1100px;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+   
+}
+.font .conteneur .profil-img{
+    width: 35%;
+
+}.font .conteneur .profil-img img{
+    height: 370px;
+    width: 370px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #dc143c;
+}.font .conteneur .profil-img img:hover{
+    transform: scale(1.1);
+}
+
+/*_____________Partie info __________*/
+.font .conteneur .profil-info{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+    margin-top: -25px;
+}
+.font .conteneur .profil-info h2{
+    font-size: 2.3rem;
+    color: #dc143c;
+    font-weight: bold;
+    border-bottom: 2px dashed #dc143c;
+}.font .conteneur .profil-info h2>span{
+    color:#faebd7;
+}
+.font .conteneur .profil-info .profil-info-text p{
+    color:#faebd7;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: justify;
+    padding: 10px;
+    border-bottom: 2px dotted #dc143c;
+}
+.font .conteneur .profil-info .profil-info-text label{
+    color: antiquewhite;
+    margin: 5px;
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: bold;
+}.font .conteneur .profil-info .profil-info-text label a:hover{
+    color: #dc143c;
+    
+}
+/* traitement du button cv */
+.font .conteneur .profil-info .profil-info-text center button{
+    outline: none;
+    border: none;    
+    background: #4169e1;
+    padding: 8px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+}.font .conteneur .profil-info .profil-info-text center button a{
+ color: antiquewhite;
+ font-weight: 500;
+}.font .conteneur .profil-info .profil-info-text center button:hover{
+    background: none;
+    border: 2px solid #4169e1;
+}.font .conteneur .profil-info .profil-info-text center button a:hover{
+    color: #4169e1;
+    
+}
+
+
+@media (max-width:775px) {
+    .font, .conteneur{
+        width: 100%;
+    }
+    .font .conteneur .profil-info{
+        width: 100%;
+        margin-top: 20px;
+    }.font .conteneur .profil-info h2{
+        text-align: center;
+    }
+    .font .conteneur .profil-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .font .conteneur .profil-info .profil-info-text center button{
+       display: block;
+    }
+    .font .conteneur{
+        margin-right: 100px;
+        
+    }
+
+} 
+
+@media (max-width:1084px) {
+    .font, .font .conteneur{
+        width: 100%;
+    }
+    .font .conteneur .profil-info{
+        width: 100%;
+        margin-top: 20px;
+    }.font .conteneur .profil-info h2{
+        text-align: center;
+    }
+    .font .conteneur .profil-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .font .conteneur .profil-info .profil-info-text center button{
+       display: block;
+    }
+    .font .conteneur{
+        width: 100%;
+        flex-direction: column;
+    }
+    .font{
+        padding: 0px;
+    }
+   
+} 
+@media (max-width:449px){
+    .font{
+        padding-right: 40px;
+    }
+}
+@media (max-width:768px){
+    .font{
+        padding-left:60px;
+    }
+}
+@media (max-width:385px){
+    .font .conteneur .profil-info .profil-info-text p{
+        text-align:start;
+    }
+    .font .conteneur{
+        width: 100%;
+        
+    }
+}

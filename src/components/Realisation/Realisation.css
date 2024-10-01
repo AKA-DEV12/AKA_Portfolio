@@ -1,0 +1,95 @@
+.compe-container{
+    margin: 4rem 0;
+    position: relative;
+}
+.compe-container h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+    color: #4169e1;
+}
+ .compe center{
+   display: flex;
+   justify-content: center;
+   gap: 3rem;
+ }
+ .compe {
+    flex-wrap: wrap;
+ }
+.compe-card{
+    border-radius: 20px;
+    border: 1.5px solid #4169e1;
+    padding: 2.5rem;
+    text-align: center;
+    background: rgba(22, 17, 47, 0.398);
+    backdrop-filter: blur(1rem);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.compe-card:hover,
+.compe-card.active{
+    background: linear-gradient(180deg, #aa94fe 0%, #7c5fe6 100% );
+}
+.compe-card span>a{
+    width: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.compe-card span>a:active{
+    color: #dc143c;
+}
+.compeIcon{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #faebd7;
+    border-radius: 20px;
+    border: 1.5px solid #4169e1;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+}
+.compeIcon img{
+    width: 2.4rem;
+    height: auto;
+    object-fit: contain;
+}
+.compe-container h2{
+    color: #dc143c;
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 2.5px;
+}.compe-container h2>span{
+    color: #faebd7;
+}
+
+/* Traitement des media Query*/
+@media (max-width:769px) {
+    .compe-card span{
+        font-size: 0.9rem;
+    }
+    .compe center{
+        flex-direction: column;
+        padding: 10px;
+        max-width: 500px;
+        justify-content: center;
+    }
+}
+
+@media (max-width:1325){
+    .compe-card{
+        padding: 2rem;
+    }
+    .compe-card span{
+        font-size: 1rem;
+    }
+    .compeIcon{
+        width: 3rem;
+        height: 3rem;
+    }
+    .compeIcon img{
+        width: 1.8rem;
+    }
+}
